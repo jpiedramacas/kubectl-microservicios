@@ -55,14 +55,14 @@ El proyecto tiene la siguiente estructura:
 
 - `docker-compose.yml`: Define cómo se ejecutan los servicios de la aplicación utilizando Docker Compose.
   
-### `healthchecks`
+### healthchecks
 
 Contiene scripts de comprobación de salud para los servicios de PostgreSQL y Redis.
 
 - `postgres.sh`: Script de comprobación de salud para PostgreSQL.
 - `redis.sh`: Script de comprobación de salud para Redis.
 
-### `result`
+### result
 
 Contiene los archivos relacionados con el servicio de resultados.
 
@@ -72,7 +72,7 @@ Contiene los archivos relacionados con el servicio de resultados.
 - `package.json`: Archivo de configuración de npm para el servicio de resultados.
 - `server.js`: Archivo principal del servidor del servicio de resultados.
   
-#### `result/tests`
+#### result/tests
 
 Contiene archivos relacionados con las pruebas del servicio de resultados.
 
@@ -80,11 +80,11 @@ Contiene archivos relacionados con las pruebas del servicio de resultados.
 - `render.js`: Script de renderización para las pruebas del servicio de resultados.
 - `tests.sh`: Script de pruebas para el servicio de resultados.
 
-#### `result/views`
+#### result/views
 
 Contiene vistas HTML y archivos estáticos del servicio de resultados.
 
-### `seed-data`
+### seed-data
 
 Contiene archivos relacionados con los datos iniciales de la aplicación.
 
@@ -92,7 +92,7 @@ Contiene archivos relacionados con los datos iniciales de la aplicación.
 - `generate-votes.sh`: Script para generar votos en la base de datos.
 - `make-data.py`: Script para generar datos en la base de datos.
 
-### `vote`
+### vote
 
 Contiene los archivos relacionados con el servicio de votación.
 
@@ -100,15 +100,15 @@ Contiene los archivos relacionados con el servicio de votación.
 - `app.py`: Archivo principal de la aplicación del servicio de votación.
 - `requirements.txt`: Archivo de requisitos de Python para el servicio de votación.
 
-#### `vote/static`
+#### vote/static
 
 Contiene archivos estáticos para el servicio de votación.
 
-#### `vote/templates`
+#### vote/templates
 
 Contiene plantillas HTML para el servicio de votación.
 
-### `worker`
+### worker
 
 Contiene los archivos relacionados con el servicio de trabajador.
 
@@ -118,9 +118,6 @@ Contiene los archivos relacionados con el servicio de trabajador.
 
 ## Instrucciones para el Despliegue
 
-### Prerrequisitos
-
-- Docker Desktop para Mac o Windows. Docker Compose se instalará automáticamente. En Linux, asegúrate de tener la última versión de Compose.
 
 ### Pasos para Desplegar
 
