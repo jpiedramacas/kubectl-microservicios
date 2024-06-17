@@ -64,13 +64,13 @@ Define un Deployment para el componente worker de la aplicación, que procesa lo
     - Para la aplicación de votación en el puerto 31000:
     
         ```bash
-        kubectl port-forward svc/vote 31000:80
+        kubectl port-forward svc/vote 31000:5000
         ```
 
     - Para la aplicación de resultados en el puerto 31001:
     
         ```bash
-        kubectl port-forward svc/result 31001:80
+        kubectl port-forward svc/result 31001:5001
         ```
 
 ## Comandos Útiles para Verificación
