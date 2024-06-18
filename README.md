@@ -1,6 +1,6 @@
 # Despliegue de una Aplicación de Votación en Kubernetes
 
-Este archivo README proporciona una guía paso a paso para desplegar una aplicación de votación en un clúster de Kubernetes. Se incluyen explicaciones detalladas de los archivos de configuración y los comandos necesarios para crear y eliminar los recursos en Kubernetes.
+Este README proporciona una guía detallada para desplegar una aplicación de votación en un clúster de Kubernetes. Se incluyen explicaciones de los archivos de configuración y los comandos necesarios para crear y eliminar los recursos en Kubernetes.
 
 ## Contenido
 
@@ -20,32 +20,33 @@ Este archivo README proporciona una guía paso a paso para desplegar una aplicac
 
 ## Archivos de Configuración
 
-`### db-deployment.yaml`
+### db-deployment.yaml
 Define un Deployment para la base de datos PostgreSQL. Especifica la cantidad de réplicas del contenedor, la imagen del contenedor y las variables de entorno necesarias, como la contraseña de la base de datos.
 
-`### db-service.yaml`
+### db-service.yaml
 Define un Service para la base de datos PostgreSQL, permitiendo que otros componentes de la aplicación se comuniquen con ella. Establece el puerto y utiliza un selector para vincular el servicio con el Deployment de la base de datos.
 
-`### redis-deployment.yaml`
+### redis-deployment.yaml
 Define un Deployment para el almacén de datos en memoria Redis. Especifica la imagen del contenedor y el puerto en el que Redis estará disponible.
 
-`### redis-service.yaml`
+### redis-service.yaml
 Define un Service para Redis, permitiendo que otros componentes de la aplicación se comuniquen con él. Establece el puerto y utiliza un selector para vincular el servicio con el Deployment de Redis.
 
-`### result-deployment.yaml`
+### result-deployment.yaml
 Define un Deployment para el componente de resultados de la aplicación, que mostrará los resultados de las votaciones. Especifica la imagen del contenedor y el puerto en el que la aplicación estará disponible.
 
-`### result-service.yaml`
-Define un Service para el componente de resultados, permitiendo acceder a la aplicación de resultados desde fuera del clúster. Establece el puerto y utiliza un selector para vincular el servicio con el Deployment de resultados. Además, utiliza el tipo NodePort para hacer que el servicio esté disponible en un puerto específico en cada nodo del clúster.
+### result-service.yaml
+Define un Service para el componente de resultados, permitiendo acceder a la aplicación de resultados desde fuera del clúster. Establece el puerto y utiliza un selector para vincular el servicio con el Deployment de resultados. Utiliza el tipo NodePort para hacer que el servicio esté disponible en un puerto específico en cada nodo del clúster.
 
-`### vote-deployment.yaml`
+### vote-deployment.yaml
 Define un Deployment para el componente de votación de la aplicación, que permitirá a los usuarios emitir sus votos. Especifica la imagen del contenedor y el puerto en el que la aplicación estará disponible.
 
-`### vote-service.yaml`
-Define un Service para el componente de votación, permitiendo acceder a la aplicación de votación desde fuera del clúster. Establece el puerto y utiliza un selector para vincular el servicio con el Deployment de votación. Al igual que el servicio de resultados, utiliza el tipo NodePort para hacer que el servicio esté disponible en un puerto específico en cada nodo del clúster.
+### vote-service.yaml
+Define un Service para el componente de votación, permitiendo acceder a la aplicación de votación desde fuera del clúster. Establece el puerto y utiliza un selector para vincular el servicio con el Deployment de votación. Utiliza el tipo NodePort para hacer que el servicio esté disponible en un puerto específico en cada nodo del clúster.
 
-`### worker-deployment.yaml`
+### worker-deployment.yaml
 Define un Deployment para el componente worker de la aplicación, que procesa los votos y actualiza los resultados en la base de datos. Especifica la imagen del contenedor y las configuraciones necesarias para que el worker funcione correctamente.
+
 
 ## Pasos para Desplegar la Aplicación
 
